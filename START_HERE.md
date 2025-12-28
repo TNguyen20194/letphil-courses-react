@@ -1,4 +1,4 @@
-## Instructions
+## Instructions (https://vite.dev/guide/)
 - Setup a new react project using the vite command in your terminal:
    - npm create vite@latest .  <----- ***this is not a period at the end it's part of the command***
 - Once setup you'll see all of the starter/boiler plate files and folders
