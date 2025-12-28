@@ -10,6 +10,12 @@ export const CaseInsensitive = () => {
       dataPreview={names}
     >
       <ul>
+        {names
+        .filter((name) => name.toLocaleLowerCase().includes("a"))
+        .map((nameWithLetterA) => {
+          console.log("React key: ", nameWithLetterA)
+          return <li key={nameWithLetterA}>{nameWithLetterA}</li>
+        })}
       </ul>
     </ProblemCard>
   );

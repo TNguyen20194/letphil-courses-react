@@ -7,11 +7,12 @@ import { EvensOnly } from "./filtering/EvensOnly";
 import { LongWordsOnly } from "./filtering/LongWordsOnly";
 import { AdminsOnly } from "./filtering/AdminsOnly";
 import { CartTotal } from "./reduce/CartTotal";
+import { CaseInsensitive } from "./filtering/CaseInsensitive";
 
 function App() {
   return (
     <>
-      <CartTotal />
+      <CaseInsensitive />
     </>
   );
 }

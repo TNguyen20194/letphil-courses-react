@@ -17,11 +17,19 @@ export const AdminsOnly = () => {
       dataPreview={users}
     >
       {/* [{ id: 1, name: "Alex", isAdmin: true}, { id: 3, name: "Robin", isAdmin: true }] */}
-      {users
-        .filter((user) => user.isAdmin === true)
-        .map((filteredUser) => (
-          <div>{filteredUser.name}</div>
-        ))}
+        {users.
+        filter((user) => user.isAdmin === true).
+        map((filteredUser) => {
+          console.log(filteredUser.id)
+          return (
+        <div key={filteredUser.id}>
+          <div>User name: {filteredUser.name}</div>
+          <div>User ID: {filteredUser.id}</div>
+        </div>
+        )
+        })}
+
+
     </ProblemCard>
   );
 };
