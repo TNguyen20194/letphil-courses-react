@@ -9,11 +9,12 @@ import { AdminsOnly } from "./filtering/AdminsOnly";
 import { CartTotal } from "./reduce/CartTotal";
 import { CaseInsensitive } from "./filtering/CaseInsensitive";
 import { EmptyState } from "./filtering/EmptyState";
+import { MultipleConditions } from "./filtering/MultipleConditions";
 
 function App() {
   return (
     <>
-      <EmptyState />
+      <MultipleConditions />
     </>
   );
 }
