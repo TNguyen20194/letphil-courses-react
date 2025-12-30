@@ -1,4 +1,6 @@
-import React from "react";
+import ProblemCard from "../components/ProblemCard";
+
+
 
 export const SearchSimulation = ({ searchTerm }) => {
   const items = ["React", "JavaScript", "TypeScript", "Node", "CSS"];

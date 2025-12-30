@@ -12,11 +12,12 @@ import { EmptyState } from "./filtering/EmptyState";
 import { MultipleConditions } from "./filtering/MultipleConditions";
 import { PreFilter } from "./filtering/PreFilter";
 import { PriceGreaterThan20 } from "./filtering/PriceGreaterThan20";
+import { SearchSimulation } from "./filtering/SearchSimulation";
 
 function App() {
   return (
     <>
-      <PriceGreaterThan20 />
+      <SearchSimulation />
     </>
   );
 }
