@@ -11,11 +11,12 @@ import { CaseInsensitive } from "./filtering/CaseInsensitive";
 import { EmptyState } from "./filtering/EmptyState";
 import { MultipleConditions } from "./filtering/MultipleConditions";
 import { PreFilter } from "./filtering/PreFilter";
+import { PriceGreaterThan20 } from "./filtering/PriceGreaterThan20";
 
 function App() {
   return (
     <>
-      <PreFilter />
+      <PriceGreaterThan20 />
     </>
   );
 }
