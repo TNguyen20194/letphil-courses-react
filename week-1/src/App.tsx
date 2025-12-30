@@ -17,7 +17,7 @@ import { SearchSimulation } from "./filtering/SearchSimulation";
 function App() {
   return (
     <>
-      <SearchSimulation />
+      <SearchSimulation searchTerm="re"/>
     </>
   );
 }
