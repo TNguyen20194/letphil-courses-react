@@ -10,11 +10,12 @@ import { CartTotal } from "./reduce/CartTotal";
 import { CaseInsensitive } from "./filtering/CaseInsensitive";
 import { EmptyState } from "./filtering/EmptyState";
 import { MultipleConditions } from "./filtering/MultipleConditions";
+import { PreFilter } from "./filtering/PreFilter";
 
 function App() {
   return (
     <>
-      <MultipleConditions />
+      <PreFilter />
     </>
   );
 }
