@@ -14,13 +14,14 @@ import { PreFilter } from "./filtering/PreFilter";
 import { PriceGreaterThan20 } from "./filtering/PriceGreaterThan20";
 import { SearchSimulation } from "./filtering/SearchSimulation";
 import { ConditionalRender } from "./mapping/ConditionalRender";
+import { DoubleNumbers } from "./mapping/DoubleNumbers";
 
 function App() {
   return (
     <>
       {/* <SearchSimulation searchTerm="re"/>
       <SearchSimulation searchTerm="c"/> */}
-      <ConditionalRender />
+      <DoubleNumbers />
     </>
   );
 }
