@@ -11,7 +11,7 @@ export const FormatPrices = () => {
     >
       <ul>
         {prices.map((price) => {
-          return <div key={price}>{price}</div>;
+          return <div key={price}>{price.toFixed(2)}</div>;
         })}
       </ul>
     </ProblemCard>

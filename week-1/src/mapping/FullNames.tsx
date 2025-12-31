@@ -1,7 +1,5 @@
 import ProblemCard from "../components/ProblemCard";
 
-import React from "react";
-
 export const FullNames = () => {
   const people = [
     { firstName: "Taylor", lastName: "Kim" },
@@ -14,7 +12,9 @@ export const FullNames = () => {
       question="Render full names by combining firstName + lastName."
       dataPreview={people}
     >
-      <div></div>
+      <div>
+        {people.map((person, index) => <li key={index}>{person.firstName} {person.lastName}</li>)}
+      </div>
     </ProblemCard>
   );
 };
