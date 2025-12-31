@@ -4,6 +4,14 @@ interface SearchSimulationProps {
   searchTerm: string
 };
 
+/*
+  props = {
+  searchTerm: "re" 
+  }'
+
+  props.searchTerm = "re";
+  */
+
 export const SearchSimulation = ({ searchTerm } : SearchSimulationProps) => {
   const items = ["React", "JavaScript", "TypeScript", "Node", "CSS"];
 

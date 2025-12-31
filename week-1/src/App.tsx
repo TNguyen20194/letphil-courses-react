@@ -13,11 +13,14 @@ import { MultipleConditions } from "./filtering/MultipleConditions";
 import { PreFilter } from "./filtering/PreFilter";
 import { PriceGreaterThan20 } from "./filtering/PriceGreaterThan20";
 import { SearchSimulation } from "./filtering/SearchSimulation";
+import { ConditionalRender } from "./mapping/ConditionalRender";
 
 function App() {
   return (
     <>
-      <SearchSimulation searchTerm="re"/>
+      {/* <SearchSimulation searchTerm="re"/>
+      <SearchSimulation searchTerm="c"/> */}
+      <ConditionalRender />
     </>
   );
 }

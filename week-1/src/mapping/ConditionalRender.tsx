@@ -21,6 +21,13 @@ export const ConditionalRender = () => {
       dataPreview={users}
     >
       <ul>
+        {users.map((user) => {
+          const userStatus = user.isOnline ? "Online" : "Offline";
+          const userStatusIcon = user.isOnline ? "🟢 " : "⚪";
+          return (
+            <li key={user.id}>{userStatusIcon} {user.name} - {userStatus}</li>
+          )
+        })}
       </ul>
     </ProblemCard>
   );
