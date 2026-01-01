@@ -18,13 +18,15 @@ import { DoubleNumbers } from "./mapping/DoubleNumbers";
 import { FullNames } from "./mapping/FullNames";
 import { RankedList } from "./mapping/RankedList";
 import { RenderObjects } from "./mapping/RenderObjects";
+import { CountItems } from "./reduce/CountItems";
+import { CountOccurences } from "./reduce/CountOccurences";
 
 function App() {
   return (
     <>
       {/* <SearchSimulation searchTerm="re"/>
       <SearchSimulation searchTerm="c"/> */}
-      <RenderObjects/>
+      <CountOccurences/>
     </>
   );
 }

@@ -16,19 +16,8 @@ export const CartTotal = () => {
       dataPreview={cart}
     >
       <div>
-        {cart.reduce((acc, item) => (acc += item.price * item.quantity), 0)}
+        {cart.reduce((acc, curr) => acc += (curr.price * curr.quantity), 0 )}
       </div>
     </ProblemCard>
   );
 };
-
-const cart = [
-  { id: 1, name: "Book", price: 10, quantity: 2 },
-  { id: 2, name: "Pen", price: 3, quantity: 5 },
-];
-
-let total = 0;
-
-for (let i = 0; i < cart.length; i++) {
-  total += cart[i].price * cart[i].quantity;
-}
