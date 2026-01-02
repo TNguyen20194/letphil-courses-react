@@ -26,6 +26,13 @@ export const CountOccurences = () => {
 
       result = {"apple": 3, "banna": 2, "orange": 1}
        */}
+       {/* 
+       let acc = {};
+
+      for (const curr of words) {
+        acc[curr] = (acc[curr] || 0) + 1;
+      }
+ */}
       <div>
         {/* {
           JSON.stringify(
