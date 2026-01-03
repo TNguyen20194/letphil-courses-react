@@ -47,6 +47,7 @@ export const CountOccurences = () => {
         } */}
         {
           // Object.entries converst {} into an array
+          // Converting {} into an array as React cannot render objects **
           Object.entries(
             words.reduce((acc, curr) => {
               console.log("acc:", acc, "curr:", curr, "acc[curr]:", acc[curr])
