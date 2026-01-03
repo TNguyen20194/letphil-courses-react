@@ -1,5 +1,9 @@
-import React from "react";
 import ProblemCard from "../components/ProblemCard";
+
+interface User {
+  id: number,
+  name: string
+}
 
 export const LookUp = () => {
   const users = [
@@ -14,7 +18,14 @@ export const LookUp = () => {
       dataPreview={users}
     >
       <div>
-        {/* TODO: const lookup = users.reduce((acc, u) => { acc[u.id] = u.name; return acc; }, {} as Record<number, string>) */}
+        {JSON.stringify(users.reduce((acc, user) => {
+          const userId = user.id;
+          acc[userId] = user;
+
+          console.log(acc[userId],acc)
+          return acc;
+        }, {} as Record<number, User>))
+        }
       </div>
     </ProblemCard>
   );
