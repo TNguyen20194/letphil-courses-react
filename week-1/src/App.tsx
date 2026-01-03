@@ -20,13 +20,14 @@ import { RankedList } from "./mapping/RankedList";
 import { RenderObjects } from "./mapping/RenderObjects";
 import { CountItems } from "./reduce/CountItems";
 import { CountOccurences } from "./reduce/CountOccurences";
+import { GroupUsers } from "./reduce/GroupUsers";
 
 function App() {
   return (
     <>
       {/* <SearchSimulation searchTerm="re"/>
       <SearchSimulation searchTerm="c"/> */}
-      <CountOccurences/>
+      <GroupUsers/>
     </>
   );
 }
