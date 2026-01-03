@@ -22,13 +22,14 @@ import { CountItems } from "./reduce/CountItems";
 import { CountOccurences } from "./reduce/CountOccurences";
 import { GroupUsers } from "./reduce/GroupUsers";
 import { LookUp } from "./reduce/LookUp";
+import { Stats } from "./reduce/Stats";
 
 function App() {
   return (
     <>
       {/* <SearchSimulation searchTerm="re"/>
       <SearchSimulation searchTerm="c"/> */}
-      <LookUp/>
+      <Stats/>
     </>
   );
 }
