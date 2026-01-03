@@ -24,13 +24,14 @@ import { GroupUsers } from "./reduce/GroupUsers";
 import { LookUp } from "./reduce/LookUp";
 import { Stats } from "./reduce/Stats";
 import { SumNumbers } from "./reduce/SumNumbers";
+import { SumPrices } from "./reduce/SumPrices";
 
 function App() {
   return (
     <>
       {/* <SearchSimulation searchTerm="re"/>
       <SearchSimulation searchTerm="c"/> */}
-      <SumNumbers/>
+      <SumPrices/>
     </>
   );
 }
