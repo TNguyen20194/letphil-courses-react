@@ -44,6 +44,7 @@ acc = {
             > if "role" key doesn't exist, create  it as an empty array
             > acc = {role: []}
             > if already exists, keep it
+            > then add new user to the same key(role) group
             */
             acc[role] = acc[role] || [];
             acc[role].push(user);
