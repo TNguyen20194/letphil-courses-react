@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import ProblemCard from '../components/ProblemCard';
+=======
+import React from "react";
+import ProblemCard from "../components/ProblemCard";
+>>>>>>> upstream/main
 
 
 export const Stats = () => {
@@ -55,4 +60,4 @@ export const Stats = () => {
       </div>
     </ProblemCard>
   );
-}
+};

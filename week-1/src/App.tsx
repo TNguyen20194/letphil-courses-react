@@ -27,6 +27,14 @@ import { SumNumbers } from "./reduce/SumNumbers";
 import { SumPrices } from "./reduce/SumPrices";
 
 function App() {
+  const components = [];
+
+  for (let i = 0; i < 100; i++) {
+    components.push(<UserCard />);
+  }
+
+  const fruits = ["apple", "orange", "banana"];
+
   return (
     <>
       {/* <SearchSimulation searchTerm="re"/>
