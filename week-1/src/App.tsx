@@ -1,17 +1,19 @@
 import "./App.css";
-import { RenderFruitList } from "./mapping/FruitList";
-import { RenderNumbers, CapitalizeWords } from "./mapping";
-import { RenderFromData } from "./mapping/RenderFromData";
-import { FormatPrices } from "./mapping/FormatPrices";
-import { EvensOnly } from "./filtering/EvensOnly";
-import { LongWordsOnly } from "./filtering/LongWordsOnly";
-import { AdminsOnly } from "./filtering/AdminsOnly";
-import { CartTotal } from "./reduce/CartTotal";
+import { UserCard } from "./components/UserCard";
 
 function App() {
+  const components = [];
+
+  for (let i = 0; i < 100; i++) {
+    components.push(<UserCard />);
+  }
+
+  const fruits = ["apple", "orange", "banana"];
+
   return (
     <>
-      <CartTotal />
+      <div>{[<div>apple</div>, <div>orange</div>, <div>banana</div>]}</div>
+      <div>{components}</div>
     </>
   );
 }
