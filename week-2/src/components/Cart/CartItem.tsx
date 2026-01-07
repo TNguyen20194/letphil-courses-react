@@ -1,12 +1,13 @@
 import React from "react";
 
-interface ICartItem {
-  quantity: number;
-  setCart: (newState: number) => void;
+interface CartItemProps {
   name: string;
+  quantity: number;
+  onIncrease: () => void
+  onDecrease: () => void
 }
 
-export const CartItem = ({ name, quantity, setCart }: ICartItem) => {
+export const CartItem = ({ name, quantity, onIncrease, onDecrease }: CartItemProps) => {
   return (
     <>
       <div className="mb-4">
@@ -14,8 +15,8 @@ export const CartItem = ({ name, quantity, setCart }: ICartItem) => {
           <span>{name}</span>: {quantity}
         </div>
         <div className="inline-flex gap-3 mt-3">
-          <button onClick={() => setCart(quantity + 1)}>Add Item</button>
-          <button onClick={() => setCart(quantity - 1)}>Remove Item</button>
+          <button onClick={onIncrease}>Add Item</button>
+          <button onClick={onDecrease}>Remove Item</button>
         </div>
       </div>
     </>

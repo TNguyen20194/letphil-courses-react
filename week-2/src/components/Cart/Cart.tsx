@@ -34,14 +34,30 @@ export const Cart = () => {
 
   const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0)
 
-  const handleIncrease = (id:number) => {
+  function handleIncrease(id:number) {
     const updatedCart = cart.map((item) => {
       if(item.id === id) {
         return {
           id: item.id,
           name: item.name,
           price: item.price,
-          quanity: item.quantity + 1
+          quantity: item.quantity + 1
+        };
+      }
+      return item;
+    });
+
+    setCart(updatedCart);
+  };
+
+   function handleDecrease(id:number) {
+    const updatedCart = cart.map((item) => {
+      if(item.id === id) {
+        return {
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          quantity: item.quantity - 1
         };
       }
       return item;
@@ -56,7 +72,15 @@ export const Cart = () => {
         Total cost: {total}
       </div>
       <div>
-        {cart.map((item) => <CartItem key={item.id} item={item} />)}
+        {cart.map((item) => (
+          <CartItem
+          key={item.id}
+          name={item.name}
+          quantity={item.quantity}
+          onIncrease={() => handleIncrease(item.id)}
+          onDecrease={() => handleDecrease(item.id)}
+          />
+          ))}
       </div>
     </div>
   );
