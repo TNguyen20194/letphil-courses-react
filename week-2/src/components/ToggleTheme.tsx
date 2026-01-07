@@ -10,22 +10,19 @@ import React, { useState } from "react";
  */
 
 export const ToggleTheme = () => {
+
   const [theme, setTheme] = useState("light");
 
-  function onClick() {
-    if (theme == "dark") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
-    }
+  function changeTheme() {
+    let isLight = theme === "light";
+
+    isLight ? setTheme("dark") : setTheme("light");
   }
 
   return (
-    <div
-      className={`p-4 rounded ${theme === "dark" ? "bg-black" : "bg-white"}`}
-    >
-      <p>{theme}</p>
-      <button onClick={onClick}>Change Theme</button>
+    <div className={`p-4 rounded ${theme === "light" ? "bg-white" : "bg-black"}`}>
+      <p className={`${theme === "light" ? "text-black" : "text-white"}`}>{theme}</p>
+      <button onClick={changeTheme}>Toggle Theme</button>
     </div>
   );
 };

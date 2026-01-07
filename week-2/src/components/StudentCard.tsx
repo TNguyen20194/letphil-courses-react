@@ -6,17 +6,12 @@ import React, { useState } from "react";
  */
 
 export const StudentCard = ({ name }: { name: string }) => {
-  //    current state value, setter function
-  const [isActive, setIsActive] = useState(false);
-
-  function handleOnClick() {
-    setIsActive(!isActive);
-  }
+    const[isActive, setActive] = useState(false);
 
   return (
     <div>
-      <p>{name} user is active: {isActive ? "Active" : "Offline"}</p>
-      <button onClick={handleOnClick}>Toggle User</button>
+      <p>{name} is {isActive ? "🟢 Active" : "⚪ Offline"};</p>
+     <button onClick={() => setActive(!isActive)}>Toggle State</button>
     </div>
   );
 };

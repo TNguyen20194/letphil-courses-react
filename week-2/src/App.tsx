@@ -8,9 +8,10 @@ function App() {
   return (
     <>
       {/* <Cart /> */}
-      <StudentCard name="Tony" />
+      {/* <StudentCard name="Tony" />
       <StudentCard name="Truong" />
-      <StudentCard name="Maria" />
+      <StudentCard name="Maria" /> */}
+      <ToggleTheme/>
       {/* <Example /> */}
     </>
   );
