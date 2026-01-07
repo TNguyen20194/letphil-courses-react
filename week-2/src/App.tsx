@@ -8,12 +8,12 @@ import { Cart } from "./components/Cart/Cart";
 function App() {
   return (
     <>
-      {/* <Cart /> */}
+      <Cart />
       {/* <StudentCard name="Tony" />
       <StudentCard name="Truong" />
       <StudentCard name="Maria" /> */}
       {/* <ToggleTheme/> */}
-      <Form defaultName="Christian"/>
+      {/* <Form defaultName="Christian"/> */}
       {/* <Example /> */}
     </>
   );

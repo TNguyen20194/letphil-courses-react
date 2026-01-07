@@ -9,12 +9,14 @@ interface ICartItem {
 export const CartItem = ({ name, quantity, setCart }: ICartItem) => {
   return (
     <>
-      <div>
-        <span>{name}</span>: {quantity}
-      </div>
-      <div>
-        <button onClick={() => setCart(quantity + 1)}>Add Item</button>
-        <button onClick={() => setCart(quantity - 1)}>Remove Item</button>
+      <div className="mb-4">
+        <div>
+          <span>{name}</span>: {quantity}
+        </div>
+        <div className="inline-flex gap-3 mt-3">
+          <button onClick={() => setCart(quantity + 1)}>Add Item</button>
+          <button onClick={() => setCart(quantity - 1)}>Remove Item</button>
+        </div>
       </div>
     </>
   );

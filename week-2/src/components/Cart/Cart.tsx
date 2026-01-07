@@ -21,18 +21,43 @@ import { CartItem } from "./CartItem";
 // { orange: 0 }
 
 export const Cart = () => {
-  const [cart, setCart] = useState([
-    { name: "apple", quantity: 0 },
-    { name: "orange", quantity: 0 },
+  interface Item {
+    id: number,
+    name: string,
+    quantity: number,
+    price: number
+  }
+  const [cart, setCart] = useState<Item[]>([
+    { id: 1, name: "Apple", price: 2, quantity: 3 },
+    { id: 2, name: "Banana", price: 1, quantity: 5 }
   ]);
 
+  const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0)
+
+  const handleIncrease = (id:number) => {
+    const updatedCart = cart.map((item) => {
+      if(item.id === id) {
+        return {
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          quanity: item.quantity + 1
+        };
+      }
+      return item;
+    });
+
+    setCart(updatedCart);
+  };
+
   return (
-    <div>
-      <ul>
-        {cart.map((item) => (
-          <CartItem key={item.name} name={item.name} quantity={item.quantity} setCart={setCart}/>
-        ))}
-      </ul>
+    <div className="px-4">
+      <div>
+        Total cost: {total}
+      </div>
+      <div>
+        {cart.map((item) => <CartItem key={item.id} item={item} />)}
+      </div>
     </div>
   );
 };
