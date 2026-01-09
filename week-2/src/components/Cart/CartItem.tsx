@@ -1,22 +1,24 @@
 import React from "react";
 
 interface CartItemProps {
+  id:number
   name: string;
   quantity: number;
-  onIncrease: () => void
-  onDecrease: () => void
+  price: number;
+  updateCart: (id: number, action: string) => void
 }
 
-export const CartItem = ({ name, quantity, onIncrease, onDecrease }: CartItemProps) => {
+export const CartItem = ({ id, name, quantity, price, updateCart }: CartItemProps) => {
   return (
     <>
       <div className="mb-4">
-        <div>
-          <span>{name}</span>: {quantity}
+        <div className="flex flex-col justify-center items-center">
+          <span>{name}: {quantity}</span>
+          <span>Price per item: ${price}</span>
         </div>
         <div className="inline-flex gap-3 mt-3">
-          <button onClick={onIncrease}>Add Item</button>
-          <button onClick={onDecrease}>Remove Item</button>
+          <button onClick={() => updateCart(id, "increase")}>Add Item</button>
+          <button onClick={() => updateCart(id, "decrease")}>Remove Item</button>
         </div>
       </div>
     </>

@@ -21,45 +21,36 @@ import { CartItem } from "./CartItem";
 // { orange: 0 }
 
 export const Cart = () => {
-  interface Item {
+interface Item {
     id: number,
     name: string,
     quantity: number,
     price: number
-  }
-  const [cart, setCart] = useState<Item[]>([
-    { id: 1, name: "Apple", price: 2, quantity: 3 },
-    { id: 2, name: "Banana", price: 1, quantity: 5 }
+  };
+
+type Cart = Item[];
+
+  const [cart, setCart] = useState<Cart>([
+    { id: 1, name: "Apple", price: 2, quantity: 0 },
+    { id: 2, name: "Banana", price: 1, quantity: 0 }
   ]);
 
   const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0)
 
-  function handleIncrease(id:number) {
+  function updateCart(id:number, action:string) {
     const updatedCart = cart.map((item) => {
+
+      const newQty = action === "increase" ? item.quantity + 1 : item.quantity - 1;
+
       if(item.id === id) {
         return {
-          id: item.id,
-          name: item.name,
-          price: item.price,
-          quantity: item.quantity + 1
+          ...item,
+          quantity:
+          // Keep what value is larger => Preventing items from going to negative value
+          Math.max(0, newQty)
         };
       }
-      return item;
-    });
-
-    setCart(updatedCart);
-  };
-
-   function handleDecrease(id:number) {
-    const updatedCart = cart.map((item) => {
-      if(item.id === id) {
-        return {
-          id: item.id,
-          name: item.name,
-          price: item.price,
-          quantity: item.quantity - 1
-        };
-      }
+      if(item.quantity < 0) return item;
       return item;
     });
 
@@ -69,19 +60,57 @@ export const Cart = () => {
   return (
     <div className="px-4">
       <div>
-        Total cost: {total}
+        <h2 className="text-2xl mb-5">Total cost: ${total}</h2>
       </div>
       <div>
         {cart.map((item) => (
           <CartItem
           key={item.id}
+          id={item.id}
           name={item.name}
           quantity={item.quantity}
-          onIncrease={() => handleIncrease(item.id)}
-          onDecrease={() => handleDecrease(item.id)}
+          price={item.price}
+          updateCart={updateCart}
           />
           ))}
       </div>
     </div>
   );
 };
+
+
+/* Switch Method:
+
+function updateCart(id: number, action: string) {
+    switch (action) {
+      case "increase": {
+        const updatedCart = cart.map((item) => {
+          if (item.id === id) {
+            return {
+              ...item,
+              quantity: item.quantity + 1,
+            };
+          }
+          return item;
+        });
+        setCart(updatedCart);
+        break;
+      }
+      case "decrease": {
+        const updatedCart = cart.map((item) => {
+          if (item.id === id && item.quantity > 0) {
+            return {
+              ...item,
+              quantity: item.quantity - 1,
+            };
+          }
+          return item;
+        });
+        setCart(updatedCart);
+        break;
+      }
+      default:
+        return [];
+    }
+  }
+*/
