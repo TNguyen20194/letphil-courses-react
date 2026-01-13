@@ -5,7 +5,11 @@ import React, { useState } from "react";
  * user is set to active
  */
 
-export const StudentCard = ({ name }: { name: string }) => {
+interface StudentCardType {
+  name: string
+}
+
+export const StudentCard = ({ name }: StudentCardType) => {
   //    current state value, setter function
   const [isActive, setIsActive] = useState(false);
 

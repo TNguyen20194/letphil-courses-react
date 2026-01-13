@@ -1,20 +1,31 @@
-import React from "react";
-
 interface ICartItem {
-  quantity: number;
-  setCart: (newState: number) => void;
+  id: number;
   name: string;
+  quantity: number;
+  price: number;
+  updateCart: (id: number, action: string) => void;
 }
 
-export const CartItem = ({ name, quantity, setCart }: ICartItem) => {
+export const CartItem = ({
+  id,
+  name,
+  quantity,
+  price,
+  updateCart,
+}: ICartItem) => {
   return (
     <>
       <div>
-        <span>{name}</span>: {quantity}
+        <span>
+          {name}: {quantity}
+        </span>
       </div>
       <div>
-        <button onClick={() => setCart(quantity + 1)}>Add Item</button>
-        <button onClick={() => setCart(quantity - 1)}>Remove Item</button>
+        <span>Price per item {price}</span>
+      </div>
+      <div>
+        <button onClick={() => updateCart(id, "increase")}>Add Item</button>
+        <button onClick={() => updateCart(id, "decrease")}>Remove Item</button>
       </div>
     </>
   );

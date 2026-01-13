@@ -21,17 +21,24 @@ import { CartItem } from "./CartItem";
 
 const items = [
   { itemName: "orange", itemQuantity: 0 },
-  { itemName: "apple", itemQuantity: 12 },
+  { itemName: "apple", itemQuantity: 0 },
   { itemName: "kiwi", itemQuantity: 0 },
 ];
 
 export const Cart = () => {
   const [cart, setCart] = useState(items);
 
-  function handleUpdateCart(item: string) {
+  // "increase"
+  function handleUpdateCart(itemName: string, buttonType: string) {
     const updatedCart = cart.map((curr_item) => {
-      if (curr_item.itemName === item) {
-        curr_item.itemQuantity += 1;
+      if (curr_item.itemName === itemName) {
+        if (buttonType === "increase") {
+          curr_item.itemQuantity += 1;
+        }
+
+        if (buttonType === "decrease" && curr_item.itemQuantity > 0) {
+          curr_item.itemQuantity -= 1;
+        }
 
         return curr_item;
       }
