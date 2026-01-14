@@ -24,7 +24,7 @@ type UserType = User[];
 export const ApiCopy = () => {
   const API = "https://randomuser.me/api/?results=10";
 
-  const [users, setUserData] = useState<UserType>([]);
+  const [users, setUserData] = useState<UserType>([]);  
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 

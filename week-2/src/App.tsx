@@ -9,11 +9,13 @@ import { ToggleTheme } from "./components/ToggleTheme";
 import { Form } from "./components/Form";
 import { Cart } from "./components/Cart/Cart";
 import { DocumentTitle } from "./components/useEffect/DocumentTitle";
+import { Api2 } from "./components/useEffect/Api2";
+import { BreedWithImages } from "./components/useEffect/BreedWithImages";
 
 function App() {
   return (
     <>
-      <ApiCopy/>
+      <BreedWithImages/>
     {/* <DocumentTitle/> */}
       {/* <Cart /> */}
       {/* <StudentCard name="Tony" />
