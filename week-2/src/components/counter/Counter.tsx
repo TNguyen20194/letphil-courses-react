@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./styles.css";
 
 /**
  * Build a Counter component that increments by a step value passed in as a prop.
@@ -19,7 +20,7 @@ export const Counter = () => {
 
   return (
     <div>
-      <button onClick={handleIncreaseCount}>Increase Count</button>
+      <button className="button" onClick={handleIncreaseCount}>Increase Count</button>
       <button
         onClick={() =>
           setCurrentCount(JSON.stringify(Number(currentCount) - 1))

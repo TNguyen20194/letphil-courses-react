@@ -1,10 +1,13 @@
 import "./App.css";
-import { Cart } from "./components/Cart/Cart";
+import { Api } from "./components/useEffect/Api";
+import { PokeApi } from "./components/useEffect/PokeApi";
+import { OwenApi } from "./components/useEffect/OwenApi";
 
 function App() {
   return (
     <>
-      <Cart />
+      <OwenApi />
+      {/* <PokeApi /> */}
     </>
   );
 }

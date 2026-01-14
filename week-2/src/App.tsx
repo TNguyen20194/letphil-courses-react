@@ -1,3 +1,8 @@
+import React from "react";
+import { Mounting } from "./components/useEffect/Mounting";
+import { Example } from "./components/useEffect/Example";
+import { Api } from "./components/useEffect/Api";
+
 import "./App.css";
 import { Example, StudentCard } from "./components";
 import { Counter } from "./components/Counter";

@@ -10,14 +10,13 @@ Each section ends with **projects** that combine the concepts together.
 
 ## 🟢 Beginner Exercises (Basics, JSX, Components)
 
-
 ### Basic JSX Components - Homework
 - **Greeting Component** – Displays “Hello, [name]!” using props.
 - **Static Profile Card** – User’s name, profile picture, and bio.
 - **Company Logo** – Render an image with alt text.
 - **Footer Component** – © year + company name.
 
-### Mapping over Lists Practice - Homework 
+### Mapping over Lists Practice - Homework
 - **List Rendering** – Render simple array of strings.  
 - **Team Directory** – Render list of users as profile cards.  
 - **Navigation Menu** – Map array of nav links into a list.  
@@ -26,7 +25,7 @@ Each section ends with **projects** that combine the concepts together.
 
 ---
 
-### Basic Components w/ useState 
+### Basic Components w/ useState
 - **Counter App** – + and – buttons.
 - **Toggle Button** – Switch between ON/OFF.
 - **Show/Hide Text** – Toggle paragraph visibility.
@@ -37,18 +36,18 @@ Each section ends with **projects** that combine the concepts together.
 ---
 
 ### ⭐ Beginner Projects (Combine Topics)
-1. **Employee Directory App**  
+1. **Employee Directory App**
    - Show employee cards (props + map) 
    - Add a search input (state)
    - Toggle bio expand/collapse
 
-2. **Simple Dashboard Widgets**  
+2. **Simple Dashboard Widgets**
    - Greeting banner
    - Notification counter
    - Sidebar toggle
    - Shortcut links (map)
 
-3. **Product Catalog Preview**  
+3. **Product Catalog Preview**
    - Product cards with price + image
    - “Favorite” toggle per product
    - Currency switcher (USD ↔ EUR)
